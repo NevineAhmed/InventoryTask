@@ -61,9 +61,9 @@
         <th scope="col">#</th>
         <th scope="col">Item Name</th>
         <th scope="col">Quality</th>
-        <th scope="col">Quantity</th>
         <th scope="col">Sell_in Days</th>
         <th scope="col"> Sell Date</th>
+        <th scope="col">Category</th>
       </tr>
     </thead>
     <tbody>
@@ -72,10 +72,9 @@
         <th scope="row">{{x+1}}</th>
         <td>{{item.item_name}}</td>
         <td>{{item.quality}}</td>
-        <td>{{item.quantity}}</td>
         <td>{{item.sell_in_days|date}}</td>
         <td>{{item.sell_date|date}}</td>
-        <td>{{item.sell_date|date}}</td>
+        
         <div class="col-sm-6">
           <label class="text-info">Category </label>
       </div>

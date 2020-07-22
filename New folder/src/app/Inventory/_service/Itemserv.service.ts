@@ -25,24 +25,24 @@ export class ItemservService {
   }
 
   /*************************************************************** */
-  GetAllDepartments() {
-    return this.http.get<Item[]>(this.urlcon + "Item/AllItems", this.header).pipe();
+  GetAllItems() {
+    return this.http.get<Item[]>(this.urlcon + "/AllItems", this.header).pipe();
   }
-  PostDepartment(Item: Item) {
-    return this.http.post<DepartmentClass>(this.urlcon + "Item/addItem", Item, this.header).pipe();
+  PostItem(Item: Item) {
+    return this.http.post<DepartmentClass>(this.urlcon + "/addItem", Item, this.header).pipe();
   }
-  UpdateDepartment(Item: Item) {
-    return this.http.put<Item>(this.urlcon + "Item/updateItem", Item, this.header).pipe();
+  UpdateItem(Item: Item) {
+    return this.http.put<Item>(this.urlcon + "/updateItem", Item, this.header).pipe();
   }
   DeleteItem(id: number) {
-    return this.http.delete<Item>(this.urlcon + "Item/deleteItem/" + id, this.header).pipe();
+    return this.http.delete<Item>(this.urlcon + "/deleteItem/" + id, this.header).pipe();
   }
 
   GetOne(id:number){
-    return this.http.get<Item>(this.urlcon+"Item/getOne"  +id ,this.header).pipe();
+    return this.http.get<Item>(this.urlcon+"/getOne/"  +id ,this.header).pipe();
   }
 
   getCategories(){
-    return this.http.get<category[]>(this.urlcon+"Item/getAllCategories")
+    return this.http.get<category[]>(this.urlcon+"/getAllCategories")
   }
 }

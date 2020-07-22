@@ -32,7 +32,7 @@ config:any;
   }
   /******************************************* */
   getall(){
-    this.serv.GetAllDepartments().subscribe(a=>this.allItems = a)
+    this.serv.GetAllItems().subscribe(a=>this.allItems = a)
   }
 
   changeEdit(value:number){
@@ -50,7 +50,7 @@ if(check != 0){
 }
 
 else{
-  this.serv.PostDepartment(this.newItem).subscribe(e=>{this.newItem=new Item (0,null,0,0,"",0);this.getall();})
+  this.serv.PostItem(this.newItem).subscribe(e=>{this.newItem=new Item (0,null,0,0,"",0);this.getall();})
 }
   }
   showupdate(item:Item){
@@ -58,7 +58,7 @@ else{
   }
   updateItem(){
     
-    this.serv.UpdateDepartment(this.oneItem).subscribe(e=>{this.oneItem=new Item(0,null,0,0,"",0);this.getall()})
+    this.serv.UpdateItem(this.oneItem).subscribe(e=>{this.oneItem=new Item(0,null,0,0,"",0);this.getall()})
   }
 
 
@@ -75,8 +75,7 @@ else{
   changeCateg(categoryId:number){
     console.log(categoryId);
     this.catnum=categoryId;
-    // call service get works related to chosen batti5
-    // this.WorkService.getWorks(categoryId).subscribe(a=>this.Works=a);
+    
     }
 
   pageChanged(event){
